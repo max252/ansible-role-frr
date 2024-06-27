@@ -17,3 +17,7 @@
 {{ ' ip ospf ' + iio['instance_id'] + ' area ' + iio['area'] }}
 {% endif %}
 {% endif %}
+{% if iio.passive is defined and iio.passive in ['yes', 'no'] %}
+{{ ' ip ospf passive' }}
+{% endif %}
+

@@ -26,8 +26,8 @@
 {% if d['pimd'] is defined and d['pimd'] in ['yes', 'no'] %}
 {{ 'pimd=' + d['pimd'] }}
 {% endif %}
-{% if d['pimd6d'] is defined and d['pimd6d'] in ['yes', 'no'] %}
-{{ 'pimd6d=' + d['pimd6d'] }}
+{% if d['pim6d'] is defined and d['pim6d'] in ['yes', 'no'] %}
+{{ 'pim6d=' + d['pim6d'] }}
 {% endif %}
 {% if d['ldpd'] is defined and d['ldpd'] in ['yes', 'no'] %}
 {{ 'ldpd=' + d['ldpd'] }}
@@ -110,6 +110,9 @@
 {% endif %}
 {% if v['pimd_options'] is defined and v['pimd_options'] != '' %}
 {{ 'pimd_options=\"' + v['pimd_options'] + '\"' }}
+{% endif %}
+{% if v['pim6d_options'] is defined and v['pim6d_options'] != '' %}
+{{ 'pim6d_options=\"' + v['pim6d_options'] + '\"' }}
 {% endif %}
 {% if v['ldpd_options'] is defined and v['ldpd_options'] != '' %}
 {{ 'ldpd_options=\"' + v['ldpd_options'] + '\"' }}
