@@ -61,6 +61,15 @@
 {% endif %}
 {% endfor %}
 {% endif %}
+{% if r['network'] is defined and r['network'] != '' %}
+{% for n in r['network'] %}
+{% if n['cidr'] is defined and n['cidr'] != '' %}
+{% if n['area'] is defined and n['area'] != '' %}
+{{ ' network ' + n['cidr'] + ' area ' + n['area'] }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
 {% if r['redistribute'] is defined and r['redistribute'] != '' %}
 {% for rr in r['redistribute'] %}
 {% if rr['connected'] is defined and rr['connected'] != '' %}
